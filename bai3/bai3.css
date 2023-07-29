@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+img {
+    border-radius: 10px;
+    width: 300px;
+    height: 500px;
+    object-fit: cover;
+    
+    
+}
+
+.wrapper_btn {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.wrapper_btn button {
+    margin: 0 10px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
