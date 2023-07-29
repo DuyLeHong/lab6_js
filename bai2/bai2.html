@@ -91,14 +91,20 @@
             for (let arrWin of arrWins) {
                 console.log(arrWin);
                 if (checkArrContainsAnother(arrX, arrWin)) {
-                    confirm('Ben X thang');
-                    location.reload();
-                    return;
+                    setTimeout(() => {
+                        confirm('Ben X thang');
+                        location.reload();
+                        return;
+                    }, 100);
+
                 }
                 if (checkArrContainsAnother(arrO, arrWin)) {
-                    confirm('Ben O thang');
-                    location.reload();
-                    return;
+                    setTimeout(() => {
+                        confirm('Ben O thang');
+                        location.reload();
+                        return;
+                    }, 100);
+
                 }
             }
 
@@ -106,9 +112,12 @@
         }
 
         function checkArrContainsAnother(source, target) {
-            var result = source.filter(function (item) { 
-                return target.indexOf(item) > -1 });
-            return (result.length == 3);
+
+            const hasAllElems = target.every(elem => source.includes(elem));
+            return hasAllElems;
+            // var result = source.filter(function (item) { 
+            //     return target.indexOf(item) > -1 });
+            // return (result.length == 3);
         }
     </script>
 </body>
